@@ -1,0 +1,137 @@
+.player_card {
+  height: auto;
+  width: 600px;
+  background: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+
+.profile {
+  width: 100%;
+  text-align: center;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.profile .image {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 10px auto 0 auto;
+}
+
+.profile .image .circle_1,
+.profile .image .circle_2 {
+  position: absolute;
+  box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%;
+  transition: all 1.5s ease-in-out;
+}
+
+.profile .image .circle_1 {
+  width: 195px;
+  height: 195px;
+  top: -8px;
+  left: -5px;
+  border-color: #786450 #786450 #786450 transparent;
+}
+
+.profile .image .circle_2 {
+  width: 200px;
+  height: 200px;
+  top: -11px;
+  left: -8px;
+  border-color: #786450 transparent #786450 #786450;
+}
+
+.profile .image img {
+  display: block;
+  border-radius: 50%;
+  background: #f5e8df;
+  width: 100%;
+}
+
+.profile .image:hover .circle_1 {
+  transform: rotate(360deg);
+}
+
+.profile .image:hover .circle_2 {
+  transform: rotate(-360deg);
+}
+
+.profile .player_name {
+  font-size: 30px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.profile .player_position {
+  font-size: 20;
+  line-height: 15px;
+}
+
+.player_stats {
+  float: left;
+}
+
+.player_stats .box {
+  box-sizing: border-box;
+  width: 120px;
+  height: 110px;
+  background: #f5e8df;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.player_stats .box:hover {
+  background: #e1cfc2;
+  cursor: pointer;
+}
+
+.player_stats .box:nth-child(2) {
+  margin: 1px 0;
+}
+
+.player_stats span {
+  display: block;
+}
+
+.player_stats .value {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.player_stats .parameter {
+  font-size: 11px;
+}
+
+@media screen and (max-width: 660px) {
+  .player_card {
+    width: 70%;
+    flex-direction: column;
+  }
+  .player_stats {
+    display: flex;
+    justify-content: space-between;
+  }
+  .player_stats .box {
+    width: 33.3%;
+    height: 110px;
+    margin: 1px 0;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .player_card {
+    width: 90%;
+    flex-direction: column;
+  }
+}
